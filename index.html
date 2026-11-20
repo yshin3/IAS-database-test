@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI &amp; Digital Infrastructure in Africa — Resource Database</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f4f0;--surface:#fff;--border:rgba(0,0,0,.08);--bmd:rgba(0,0,0,.14);--text:#181816;--t2:#58574f;--t3:#8f8e86;--accent:#0f6e5a;--r:10px}
+@media(prefers-color-scheme:dark){:root{--bg:#15171a;--surface:#1d2024;--border:rgba(255,255,255,.08);--bmd:rgba(255,255,255,.16);--text:#ecebe6;--t2:#b3b2aa;--t3:#7f7e77;--accent:#4cc3a6}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.5}
+header{background:var(--surface);border-bottom:1px solid var(--border);padding:0 1.5rem}
+.hin{max-width:1300px;margin:0 auto;min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.logo{font-family:'DM Serif Display',serif;font-size:19px}.logo em{color:var(--accent);font-style:normal}
+.hlink{font-size:12px;padding:4px 12px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);text-decoration:none}
+.wrap{max-width:1300px;margin:0 auto;padding:1.25rem 1.5rem;display:grid;grid-template-columns:1fr 250px;gap:22px;align-items:start}
+.search{display:flex;gap:8px;margin-bottom:12px}
+.search input,.search select{font:inherit;font-size:13px;color:var(--text);background:var(--surface);border:1px solid var(--bmd);border-radius:999px;padding:8px 14px;outline:none}
+.search input{flex:1;min-width:0}.search input:focus{border-color:var(--accent)}
+.row{display:flex;align-items:baseline;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.lab{font-size:10px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;width:58px;flex-shrink:0}
+.chips{display:flex;gap:4px;flex-wrap:wrap}
+.chip{font:inherit;font-size:12px;padding:3px 10px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--t2);cursor:pointer}
+.chip:hover{border-color:var(--bmd)}.chip.on{background:var(--text);color:var(--bg);border-color:var(--text)}
+.chip small{opacity:.6;margin-left:3px}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:.6rem 0;margin:.4rem 0 .6rem;border-bottom:1px solid var(--border);font-size:12px;color:var(--t2)}
+.bar button{font:inherit;font-size:12px;background:none;border:none;color:var(--accent);cursor:pointer}
+.res{display:block;padding:13px 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit}
+.res:hover .t{color:var(--accent)}
+.meta{display:flex;gap:5px;flex-wrap:wrap;align-items:center;margin-bottom:4px}
+.b{font-size:10px;font-weight:500;padding:2px 7px;border-radius:4px;white-space:nowrap}
+.b-News{background:#e8eef8;color:#16368a}.b-Academic{background:#f0edf8;color:#4a2080}.b-Report{background:#fdf5e8;color:#7a4a00}
+@media(prefers-color-scheme:dark){.b-News{background:#1d2a44;color:#9bb8f5}.b-Academic{background:#2b2342;color:#c4aef0}.b-Report{background:#3d2f12;color:#e8c070}}
+.tag{font-size:10px;color:var(--t3);border:1px solid var(--border);padding:2px 6px;border-radius:4px}
+.src{font-size:11px;color:var(--t2)}.date{margin-left:auto;font-size:11px;color:var(--t3)}
+.t{font-size:14px;font-weight:500;line-height:1.4;margin-bottom:3px}
+.au{font-size:12px;color:var(--t2);font-style:italic}.d{font-size:12px;color:var(--t2);line-height:1.55;margin-top:2px}
+.state{padding:3rem 0;text-align:center;color:var(--t2);font-size:13px}
+.more{display:block;margin:1.2rem auto;font:inherit;font-size:13px;padding:8px 22px;border-radius:999px;border:1px solid var(--bmd);background:var(--surface);color:var(--text);cursor:pointer}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;margin-bottom:14px;font-size:12px;color:var(--t2);line-height:1.7}
+.card h3{font-size:10px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.card a{color:var(--accent);text-decoration:none;display:block;padding:3px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.grid div{background:var(--bg);border-radius:6px;padding:8px 10px}
+.grid b{display:block;font:400 20px 'DM Serif Display',serif;color:var(--text)}
+@media(max-width:900px){.wrap{grid-template-columns:1fr}aside{order:-1}}
+</style></head><body>
+<header><div class="hin">
+  <div class="logo">AI &amp; Digital Infrastructure <em>in Africa</em></div>
+  <!-- TODO: replace with your institute's links -->
+  <a class="hlink" href="#" target="_blank" rel="noopener">Our Institute →</a>
+</div></header>
+
+<div class="wrap">
+<main>
+  <div class="search">
+    <input id="q" type="search" placeholder="Search titles, authors, sources, abstracts…">
+    <select id="sort"><option value="new">Newest first</option><option value="old">Oldest first</option></select>
+  </div>
+  <div class="row"><span class="lab">Type</span><div class="chips" id="f-type"></div></div>
+  <div class="row"><span class="lab">Theme</span><div class="chips" id="f-theme"></div></div>
+  <div class="row"><span class="lab">Country</span><div class="chips" id="f-country"></div></div>
+  <div class="row"><span class="lab">Source</span><div class="chips" id="f-source"></div></div>
+  <div class="row"><span class="lab">Period</span><div class="chips" id="f-period"></div></div>
+  <div class="bar"><span id="count">—</span><button id="reset">Clear all filters</button></div>
+  <div id="list"><div class="state">Loading…</div></div>
+  <button class="more" id="more" hidden>Show more</button>
+</main>
+<aside>
+  <div class="card"><h3>Overview</h3><div class="grid">
+    <div><b id="s-total">—</b>Resources</div><div><b id="s-papers">—</b>Papers</div>
+    <div><b id="s-news">—</b>News</div><div><b id="s-reports">—</b>Reports</div></div></div>
+  <div class="card"><h3>Institute links</h3>
+    <!-- TODO: add your own links -->
+    <a href="#">Publications →</a><a href="#">Project page →</a></div>
+  <div class="card"><h3>About</h3>
+    Updated daily via GitHub Actions. News from major outlets and specialist tech media, academic papers from OpenAlex, and hand-picked reports. Last update: <span id="upd">—</span>.</div>
+</aside>
+</div>
+
+<script>
+const F={type:'all',theme:'all',country:'all',source:'all',period:'all'};
+const PERIODS=[['all','Any time',0],['30','Last 30 days',30],['90','Last 90 days',90],['365','Last year',365]];
+const FACETS=['type','theme','country','source'];
+const PAGE=40;let ALL=[],Q='',SORT='new',SHOWN=PAGE;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safeUrl=u=>/^https?:\/\//i.test(u)?u:'#';
+
+function match(a,skip){
+  for(const k of FACETS)if(k!==skip&&F[k]!=='all'&&a[k]!==F[k])return false;
+  if(skip!=='period'&&F.period!=='all'&&Date.now()-new Date(a.date)>F.period*864e5)return false;
+  if(Q&&!`${a.title} ${a.desc} ${a.authors} ${a.source} ${a.theme} ${a.country}`.toLowerCase().includes(Q))return false;
+  return true;
+}
+function chips(k,opts){
+  $('f-'+k).innerHTML=opts.map(([v,label,n])=>
+    `<button class="chip${F[k]===v?' on':''}" data-k="${k}" data-v="${esc(v)}">${esc(label)}${n!=null?`<small>${n}</small>`:''}</button>`).join('');
+}
+function render(){
+  FACETS.forEach(k=>{
+    const counts={};ALL.filter(a=>match(a,k)).forEach(a=>counts[a[k]]=(counts[a[k]]||0)+1);
+    if(F[k]!=='all'&&!(F[k] in counts))counts[F[k]]=0;
+    const vals=Object.keys(counts).sort((a,b)=>counts[b]-counts[a]||a.localeCompare(b));
+    const total=Object.values(counts).reduce((x,y)=>x+y,0);
+    chips(k,[['all','All',total],...vals.map(v=>[v,v,counts[v]])]);
+  });
+  chips('period',PERIODS.map(([v,l])=>[v,l,null]));
+  const rows=ALL.filter(a=>match(a)).sort((a,b)=>SORT==='new'?b.date.localeCompare(a.date):a.date.localeCompare(b.date));
+  $('count').textContent=`${rows.length} resource${rows.length===1?'':'s'}`;
+  $('list').innerHTML=rows.length?rows.slice(0,SHOWN).map(a=>`<a class="res" href="${esc(safeUrl(a.url))}" target="_blank" rel="noopener">
+    <div class="meta"><span class="b b-${a.type.split(' ')[0]}">${esc(a.type)}</span><span class="tag">${esc(a.theme)}</span>
+    ${a.country!=='Pan-African'?`<span class="tag">${esc(a.country)}</span>`:''}<span class="src">${esc(a.source)}</span><span class="date">${esc(a.date)}</span></div>
+    <div class="t">${esc(a.title)}</div>${a.authors?`<div class="au">${esc(a.authors)}</div>`:''}
+    ${a.desc?`<div class="d">${esc(a.desc.length>240?a.desc.slice(0,240)+'…':a.desc)}</div>`:''}</a>`).join(''):'<div class="state">No resources match these filters.</div>';
+  $('more').hidden=rows.length<=SHOWN;
+}
+function stats(){
+  const n=t=>ALL.filter(a=>a.type===t).length;
+  $('s-total').textContent=ALL.length;$('s-papers').textContent=n('Academic paper');
+  $('s-news').textContent=n('News');$('s-reports').textContent=n('Report');
+}
+document.addEventListener('click',e=>{
+  const c=e.target.closest('.chip');if(!c)return;
+  const k=c.dataset.k,v=c.dataset.v;
+  if(k==='period'){F.period=v}else F[k]=(F[k]===v&&v!=='all')?'all':v;
+  SHOWN=PAGE;render();
+});
+$('q').addEventListener('input',e=>{Q=e.target.value.trim().toLowerCase();SHOWN=PAGE;render()});
+$('sort').addEventListener('change',e=>{SORT=e.target.value;render()});
+$('more').addEventListener('click',()=>{SHOWN+=PAGE;render()});
+$('reset').addEventListener('click',()=>{Object.keys(F).forEach(k=>F[k]='all');$('q').value='';Q='';SHOWN=PAGE;render()});
+
+fetch('resources.json?t='+Date.now()).then(r=>r.json()).then(d=>{
+  ALL=d.resources||[];$('upd').textContent=d.updated||'not yet';stats();
+  if(!ALL.length){$('list').innerHTML='<div class="state"><strong>No data yet.</strong><br>In your GitHub repo, open Actions → "Update resource database" → Run workflow.</div>';return}
+  render();
+}).catch(()=>{$('list').innerHTML='<div class="state">Could not load resources.json.</div>'});
+</script>
+</body></html>
